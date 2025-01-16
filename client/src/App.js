@@ -6,24 +6,31 @@ import Layout from './Layout';
 import IndexPage from './pages/IndexPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import { UserContextProvider } from './UserContext';
+import CreatePost from './pages/CreatePost';
 
 function App() {
   return (
+    <UserContextProvider>
     <Routes>
       <Route path="/" element={
-        <Layout></Layout>
+        <Layout/>
       }>
         <Route index element={
-          <IndexPage></IndexPage>
+          <IndexPage/>
         } />
         <Route path="/login" element={
-          <LoginPage></LoginPage>
+          <LoginPage/>
         } />
         <Route path="/register" element={
-          <RegisterPage></RegisterPage>
+          <RegisterPage/>
+        } />
+        <Route path="/create" element={
+          <CreatePost/>
         } />
       </Route>
     </Routes>
+    </UserContextProvider>
   );
 }
 
