@@ -1,6 +1,6 @@
 import {formatISO9075} from "date-fns";
 
-export default function Post({title,summary,cover,content,createAt}) {
+export default function Post({title,summary,cover,content,createdAt}) {
     return (
         <div className="post">
           <div className="image">
