@@ -17,7 +17,7 @@ app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname+'/uploads'))
-mongoose.connect('mongodb+srv://AdityaShirwalkar:Adi@260204@blog.v2ck6.mongodb.net/?retryWrites=true&w=majority&appName=blog');
+mongoose.connect('mongodb+srv://username:password@blog.v2ck6.mongodb.net/?retryWrites=true&w=majority&appName=blog');
 app.post('/register',async (req,res)=>{
     const{username,password} = req.body;
     try{
