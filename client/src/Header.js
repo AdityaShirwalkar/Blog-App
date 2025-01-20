@@ -22,7 +22,7 @@ export default function Header() {
         setUserInfo((null))
     }
 
-    const username = userInfo?.username;
+    const username = userInfo?.username;    
 
     return (
         <header>
@@ -30,6 +30,7 @@ export default function Header() {
             <nav>
                 {username && (
                     <>
+                    {/* <span>Hello, {username} </span> */}
                     <Link to="/create">Create new post</Link>
                     <a onClick={logout}>Logout</a>
                     </>

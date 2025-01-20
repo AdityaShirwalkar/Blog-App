@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a{
+  cursor: pointer;
+}
+
 body{
   color: #222;
 }
@@ -90,6 +94,7 @@ input{
 }
 
 button{
+  cursor: pointer;
   width: 100%;
   display: block;
   background-color: #555;
@@ -121,4 +126,37 @@ div.post-page a{
 
 div.post-page h1{
   text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time{
+  text-align: center;
+  display: block;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+div.post-page div.author{
+  line-height: 1.6rem;
+}
+
+div.edit-row{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn{
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+
+a svg{
+  height: 20px;
 }
