@@ -1,15 +1,19 @@
 import {formatISO9075} from "date-fns";
 
-export default function Post({title,summary,cover,content,createdAt}) {
+export default function Post({_id,title,summary,cover,content,createdAt,author}) {
     return (
         <div className="post">
           <div className="image">
-            <img src="https://media.wired.com/photos/674705ece62bfbd1626a1416/master/w_1920,c_limit/GettyImages-1293014500.jpg" alt=""></img>
+            <Link to={`/post/${_id}`}>
+              <img src={'http://localhost:4000/'+cover} alt=""></img>
+            </Link>
           </div>            
-          <div className="texts">   
-            <h2>{title}</h2>
+          <div className="texts">  
+            <Link to={`/post/${_id}`}>
+              <h2>{title}</h2>
+            </Link> 
             <p className="info" >
-              <a className="author">John Doe</a>
+              <a className="author">{author.username}</a>
               <time> { formatISO9075(new Date(createdAt))} </time>
             </p>
             <p className="summary"> {summary} </p>
